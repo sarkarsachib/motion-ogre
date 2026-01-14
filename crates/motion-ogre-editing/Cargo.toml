@@ -1,0 +1,13 @@
+[package]
+name = "motion-ogre-editing"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[dependencies]
+motion-ogre-time = { path = "../motion-ogre-time" }
+motion-ogre-timeline = { path = "../motion-ogre-timeline" }
+motion-ogre-animation = { path = "../motion-ogre-animation" }
+motion-ogre-playback = { path = "../motion-ogre-playback" }
+
