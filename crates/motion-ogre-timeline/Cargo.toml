@@ -1,0 +1,13 @@
+[package]
+name = "motion-ogre-timeline"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[dependencies]
+serde.workspace = true
+motion-ogre-time = { path = "../motion-ogre-time" }
+
+[dev-dependencies]
+serde_json = "1.0"

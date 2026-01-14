@@ -1,0 +1,18 @@
+[workspace]
+resolver = "2"
+members = [
+  "crates/motion-ogre-time",
+  "crates/motion-ogre-timeline",
+  "crates/motion-ogre-animation",
+  "crates/motion-ogre-playback",
+  "crates/motion-ogre-editing",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+authors = ["Motion Ogre Contributors"]
+
+[workspace.dependencies]
+serde = { version = "1.0", features = ["derive"] }
