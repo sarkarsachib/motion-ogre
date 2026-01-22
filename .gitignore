@@ -50,3 +50,13 @@ htmlcov/
 *.swo
 *~
 
+
+# Node.js
+node_modules/
+frontend/dist/
+backend/dist/
+backend/data/
+
+# Storybook
+*storybook.log
+storybook-static
