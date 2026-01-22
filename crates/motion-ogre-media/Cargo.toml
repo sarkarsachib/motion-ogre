@@ -1,0 +1,33 @@
+[package]
+name = "motion-ogre-media"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[dependencies]
+motion-ogre-time = { path = "../motion-ogre-time" }
+serde.workspace = true
+tokio = { version = "1.0", features = ["full"] }
+thiserror = "1.0"
+async-trait = "0.1"
+image = "0.24"
+indexmap = "2.0"
+lru = "0.12"
+crossbeam = "0.8"
+parking_lot = "0.12"
+
+[dependencies.ffmpeg-next]
+version = "6.1"
+features = ["format", "codec", "software-resampling", "software-scaling"]
+optional = true
+
+[features]
+default = ["ffmpeg"]
+ffmpeg = ["dep:ffmpeg-next"]
+full = ["ffmpeg"]
+
+[dev-dependencies]
+tokio-test = "0.4"
+criterion = "0.5"
+tempfile = "3.8"
