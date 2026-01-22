@@ -272,3 +272,17 @@ class Agent(ABC):
     async def critique(self, task: Task, execution_result: Dict[str, Any]) -> Dict[str, Any]:
         """Critique the execution result and suggest improvements. Must be implemented by subclasses."""
         pass
+
+    async def run(self, task: Task) -> Dict[str, Any]:
+        """
+        Convenience method that runs the full agent workflow.
+        Alias for process() method for backward compatibility.
+        """
+        result = await self.process(task)
+        return {
+            "success": result.success,
+            "result": result.result,
+            "error": result.error,
+            "execution_time": result.execution_time,
+            "state": self.state.value,
+        }
