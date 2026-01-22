@@ -6,6 +6,7 @@ members = [
   "crates/motion-ogre-animation",
   "crates/motion-ogre-playback",
   "crates/motion-ogre-editing",
+  "crates/motion-ogre-media",
 ]
 
 [workspace.package]
